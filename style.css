@@ -45,6 +45,7 @@ body {
     width: 100%;
     text-align: center;
     text-decoration: none;
+    margin: 0;  /* override h1 default margin so layout stays identical to old <div> */
 }
 
 .textMiddle {
