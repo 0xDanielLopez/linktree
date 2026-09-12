@@ -65,8 +65,11 @@ body {
     margin-right: 11.41px;
 }
 
-.link > i {
+.link > .icon {
+    width: auto;
+    height: 1em;
     margin-right: 12px;
+    vertical-align: -0.125em;
 }
 
 .link:hover>.VTlogo {
