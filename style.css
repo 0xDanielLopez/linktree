@@ -169,38 +169,55 @@ body {
     opacity: .6;
 }
 
-/* Profiles: a row of round icon buttons */
+/* Profiles: a row of round icon buttons, each with its name below */
 .socials {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 14px;
     margin-top: 4px;
 }
 
 .social {
     position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: 54px;
+    border-radius: 12px;
+    color: var(--accentColor);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.social-icon {
+    display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
     width: 54px;
     height: 54px;
-    color: var(--accentColor);
     background-color: var(--pill-bg);
     border: 1.5px solid var(--pill-border);
     border-radius: 50%;
-    -webkit-tap-highlight-color: transparent;
     transition: background-color .15s ease, border-color .15s ease, color .15s ease;
 }
 
-.social > .icon {
+.social-icon > .icon {
     width: 20px;
     height: 20px;
 }
 
+.social-label {
+    color: var(--muted);
+    font-size: .75rem;
+    line-height: 1.2;
+    transition: color .15s ease;
+}
+
 @media (hover: hover) {
     .link:hover,
-    .social:hover {
+    .social:hover .social-icon {
         background-color: var(--accentColor);
         border-color: var(--accentColor);
         color: var(--ink);
@@ -210,6 +227,10 @@ body {
         color: var(--muted-on-light);
     }
 
+    .social:hover .social-label {
+        color: var(--accentColor);
+    }
+
     .link--primary:hover {
         background-color: transparent;
         color: var(--accentColor);
@@ -217,7 +238,7 @@ body {
 }
 
 .link:active,
-.social:active {
+.social:active .social-icon {
     background-color: var(--accentColor);
     border-color: var(--accentColor);
     color: var(--ink);
@@ -958,7 +979,8 @@ body {
     }
 
     .link,
-    .social {
+    .social-icon,
+    .social-label {
         transition: none;
     }
 }
