@@ -2,7 +2,7 @@
 
 Source for https://daniel.tools/, my link-in-bio page.
 
-It is a single static page: plain HTML and CSS, no build step and no JavaScript framework. The only script tag is a JSON-LD block for structured data. Fonts and icons load from Google Fonts and Font Awesome.
+It is a single static page: plain HTML and CSS, no build step and no JavaScript framework. The only script tag is a JSON-LD block for structured data. The font loads from Google Fonts. The icons are inline SVG from Font Awesome Free (CC BY 4.0).
 
 The page links to my CV, GitHub, X, LinkedIn, VirusTotal, abuse.ch and my two projects, phishunt and TweetFeed.
 
